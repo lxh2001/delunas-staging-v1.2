@@ -1,0 +1,75 @@
+.doctor-profile-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.doctor-profile-wrapper .info-content {
+  width: 75%;
+}
+.doctor-profile-wrapper .analytics-content {
+  width: 25%;
+  background-color: #fff;
+  padding: 30px 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+  display: flex;
+  flex-direction: column;
+}
+.doctor-profile-wrapper .upload-wrapper p {
+  color: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.more-info {
+  margin-top: 20px;
+  background-color: #fafafa;
+  padding: 20px;
+}
+.more-info h5 {
+  color: #155724;
+  font-weight: 600;
+}
+.more-info input {
+  margin-top: 4px;
+  font-size: 13px;
+}
+.more-info textarea {
+  resize: none;
+  min-height: 200px;
+}
+.edit-profile,
+.save-profile {
+  background-color: #155724;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 15px;
+}
+.edit-profile img,
+.save-profile img {
+  margin-right: 4px;
+  width: 20px;
+  height: 20px;
+}
+.doctor-profile-wrapper .analytics-content img {
+  width: 70%;
+  height: 220px;
+}
+.doctor-profile-wrapper .analytics-content h5 {
+  margin-bottom: 30px;
+}
+.doctor-profile-wrapper .analytics-content ul {
+  padding: 0;
+  margin-top: 30px;
+}
+.doctor-profile-wrapper .analytics-content ul li {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #fafafa;
+    padding: 10px;
+    border: 1px solid #e9ecef;
+}

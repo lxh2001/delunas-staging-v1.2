@@ -1,0 +1,705 @@
+@media only screen and (max-width: 1366px) {
+    .sidebar {
+        width: 5.5%;
+    }
+    .content {
+        padding-left: 5.5%;
+    }
+    .homepage-header,
+    .about-section,
+    .sercices,
+    .doctors-section,
+    .contact-section {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+    .homepage-nav ul {
+        gap: 20px;
+    }
+    .homepage .slider-wrapper .slider-caption {
+        left: 7%;
+        width: 85%;
+    }
+    .vision-mission-left {
+        padding-left: 140px;
+    }
+    .vision-mission-left h1 {
+        font-size: 40px;
+    }
+    .vision-mission-left p {
+        font-size: 18px;
+    }
+    .doctor-profile-wrapper .info-content {
+        width: 100% !important;
+    }
+    .my-appointments-wrapper table td, .my-appointments-wrapper .table th {
+        font-size: 11px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .sidebar {
+        width: 7.5%;
+    }
+    .content {
+        padding-left: 7.5%;
+    }
+    .header {
+        padding-left: 10%;
+    }
+    #doctorModalDetails .modal-dialog,
+    #clientModalDetails .modal-dialog,
+    #viewDoctorFreeScheduleModal .modal-dialog,
+    #updateDoctorSchedule .modal-dialog {
+        max-width: 75%;
+    }
+
+    #editDoctorSchedule .modal-dialog {
+        max-width: 75%;
+    }
+
+    .tbl-overflow {
+        overflow: scroll;
+    }
+    .tbl-overflow table {
+        width: 150%;
+    }
+    .tbl-overflow table th,
+    .tbl-overflow table td {
+        font-size: 12px;
+    }
+    .vision-mission-left p {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+    .services-row .services-card {
+        margin: 0 4px;
+    }
+    .services-row .services-card p,
+    .reviews-card p {
+        font-size: 14px;
+    }
+    .services h2,
+    .reviews-section h1,
+    .contact-section h1,
+    .doctors-section h1 {
+        font-size: 40px;
+    }
+    .reviews-section h5 {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    .reviews-section .slick-slide img {
+        width: 80px;
+    }
+    .contact-section form {
+        padding: 20px;
+    }
+    footer {
+        padding: 30px 90px;
+    }
+    .login-l {
+        width: 65%;
+    }
+    .login-r,
+    .signup-section {
+        width: 35%;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    #homepageMenuBtn {
+        display: block;
+    }
+    .about-section .row {
+        flex-direction: column-reverse;
+    }
+    .about-section .col-6,
+    #homepageMenu li {
+        width: 100%;
+    }
+    .services,
+    .doctors-section,
+    .contact-section {
+        padding: 90px;
+    }
+    .about-section .col-6 img,
+    .contact-section .col-6 {
+        width: 100%;
+        margin-top: 40px;
+    }
+    .homepage-header {
+        padding: 10px 60px !important;
+    }
+    #homepageMenu {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        padding: 20px 60px;
+        box-shadow: rgba(0, 0, 0, 0.15) -8px 11px 9px;
+        border-top: 1px solid rgb(232, 231, 228);
+    }
+    #homepageMenu ul {
+        width: 100%;
+    }
+    #homepageMenuBtn img {
+        width: 30px;
+    }
+    #homepageMenu li a {
+        display: block;
+        width: 100%;
+    }
+    #homepageMenu li a:hover::before {
+        content: none;
+    }
+    .contact-section form {
+        width: 75%;
+        margin: auto;
+        padding: 40px;
+    }
+    .login-l {
+        width: 60%;
+    }
+    .login-r,
+    .signup-section {
+        width: 40%;
+    }
+    .signup-section form {
+        margin-bottom: 0 !important;
+    }
+    .login-r form .form-control,
+    .signup-section .form-control,
+    .my-appointments-wrapper .form-control {
+        padding: 6px;
+        font-size: 14px;
+    }
+    #calendar button, #calendar button span {
+        font-size: 11px;
+    }
+    #calendar .fc-toolbar-title {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .sidebar {
+        width: 8.5%;
+    }
+    .content {
+        padding-left: 8.5%;
+    }
+    .header {
+        padding-left: 12%;
+    }
+    .homepage-header {
+        padding: 10px 15px !important;
+    }
+    #homepageMenu {
+        padding: 10px 40px;
+    }
+    .homepage-header,
+    .about-section,
+    .doctors-section,
+    .contact-section {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    #homepageMenu ul {
+        padding-left: 0;
+    }
+    #homepageMenu ul li a {
+        font-size: 14px;
+    }
+    .vision-mission-left {
+        padding-left: 60px;
+        height: auto;
+    }
+    .my-appointments-wrapper .col-md-8, .my-appointments-wrapper .col-md-4 {
+        width: 100%;
+    }
+    .my-appointments-wrapper .schedule-wrapper {
+        margin-top: 10px;
+        padding: 10px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        width: 9.5%;
+    }
+    .content {
+        padding-left: 9.5%;
+    }
+    .header {
+        padding-left: 13%;
+    }
+    .content-body .analytics-section {
+        overflow: auto;
+        gap: 10px;
+        padding-bottom: 1px;
+    }
+    .analytics-section .analytics-card {
+        flex: none;
+        width: 75%;
+    }
+    .custom-section {
+        margin-top: 15px;
+    }
+    .custom-section,
+    .custom-section .header-title,
+    .modal-header,
+    .modal-body {
+        padding: 10px;
+    }
+    .custom-section .header-title h5,
+    footer h5 {
+        font-size: 16px;
+    }
+    .custom-section .header-title p,
+    .custom-section .header-title label,
+    .custom-section .header-title select,
+    #viewDoctorFreeScheduleModal table th,
+    #viewDoctorFreeScheduleModal table td,
+    #viewDoctorFreeScheduleModal label,
+    #viewDoctorFreeScheduleModal input,
+    #updateDoctorSchedule input,
+    #updateDoctorSchedule table td,
+    #editDoctorSchedule input,
+    #editDoctorSchedule table td,
+    footer a {
+        font-size: 12px !important;
+    }
+    .custom-section .header-title select {
+        padding: 2px 4px;
+    }
+    .appointment-info-modal .info-wrapper p {
+        font-size: 13px;
+        padding: 6px;
+    }
+    footer {
+        padding: 30px 60px;
+    }
+    footer .row img,
+    .login-r,
+    .signup-section {
+        width: 100%;
+    }
+    .login-l {
+        display: none;
+    }
+    .login-r,
+    .signup-section {
+        background: url("../images/mobile-login.svg");
+        background-size: cover;
+        height: auto;
+        overflow: auto;
+    }
+    .login-r form,
+    .signup-section form {
+        width: 70%;
+        margin: 40px auto;
+    }
+    .login-r form .form-control,
+    .signup-section .form-control {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+    .login-r form .form-control,
+    .signup-section .form-control,
+    .login-l .submit-login,
+    .signup-section .submit-signup {
+        height: 52px;
+    }
+    .signup-section h3 {
+        text-align: center !important;
+    }
+    .login-r img {
+        width: 75%;
+    }
+    .profile-photo-wrapper {
+        height: 200px;
+    }
+    #calendar {
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .content,
+    .header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .close-content-mbl-pdg {
+        padding-left: 0;
+    }
+    .close-header-mbl-pdg {
+        padding-left: 10px;
+    }
+    .open-content-mbl-pdg,
+    .open-header-mbl-pdg {
+        padding-left: 14% !important;
+    }
+    .sidebar {
+        display: none;
+        width: 12%;
+        overflow: auto;
+
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sidebar .links {
+        padding: 0;
+        flex: unset;
+    }
+    .custom-section .header-title h5 {
+        font-size: 18px;
+    }
+    .content-body {
+        padding-top: 45px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .header .menu-btn {
+        display: block;
+    }
+    .header img {
+        width: 28px;
+        height: 28px;
+    }
+    .header h1 {
+        font-size: 15px;
+    }
+    .header p {
+        font-size: 10px;
+    }
+    .header .logo {
+        width: 182px;
+        height: 52px;
+    }
+    .notification-box {
+        width: 100%;
+        height: 100vh;
+        right: unset;
+        padding: 10px;
+        top: 50px;
+        box-shadow: none;
+    }
+    #doctorModalDetails .modal-dialog,
+    #clientModalDetails .modal-dialog,
+    #viewDoctorFreeScheduleModal .modal-dialog,
+    #updateDoctorSchedule .modal-dialog,
+    #editDoctorSchedule .modal-dialog,
+    .modal-dialog {
+        max-width: 95% !important;
+        padding: 20px 0 !important;
+        margin: auto !important;
+    }
+    .analytics-section .analytics-card {
+        width: auto;
+    }
+    .tbl-overflow table {
+        width: 200%;
+    }
+    #doctorModalDetails .modal-body .d-flex,
+    #clientModalDetails .modal-body .d-flex {
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center;
+    }
+    #doctorModalDetails .info-wrapper,
+    #clientModalDetails .info-wrapper {
+        width: 100%;
+    }
+    .modal-footer .submit-btn,
+    #updateDoctorSchedule .modal-footer button,
+    #editDoctorSchedule .modal-footer button,
+    .reviews-section .reviews-right {
+        width: 100%;
+    }
+    #updateDoctorSchedule .modal-footer {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    #updateDoctorSchedule .tbl-overflow .table {
+        width: 150%;
+    }
+
+    #editDoctorSchedule .modal-footer {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    #editDoctorSchedule .tbl-overflow .table {
+        width: 150%;
+    }
+
+    .custom-section .calendar {
+        margin-top: 40px;
+    }
+    #homepageMenu {
+        padding: 20px 15px;
+        align-items: flex-start;
+    }
+    .homepage-nav ul {
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    #homepageMenu ul li a {
+        text-align: center;
+        font-size: 26px;
+        padding: 10px;
+    }
+    .navbar .book-appointment-btn {
+        padding: 6px;
+        text-align: center;
+    }
+    .hero-section h1 {
+        font-size: 52px;
+    }
+    .hero-section .slider-wrapper .slider-caption p {
+        margin: 0;
+        font-size: 22px;
+    }
+    .homepage .slider-wrapper .slider-caption {
+        left: 0;
+        top: 25%;
+        width: 100%;
+        padding: 40px;
+    }
+    .homepage-header,
+    .services,
+    .about-section,
+    .doctors-section,
+    .contact-section,
+    .reviews-right {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .services-card {
+        width: 330px !important;
+        height: auto;
+    }
+    .reviews-left {
+        display: none;
+    }
+    .reviews-card p {
+        font-size: 18px;
+    }
+    .reviews-card h5 {
+        font-size: 22px;
+    }
+    .contact-section .px-5,
+    footer .px-4 {
+        padding: 0 !important;
+    }
+    .contact-section form {
+        width: 100%;
+    }
+    footer .row {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+    footer .row img {
+        width: 70%;
+        margin: 10px auto;
+    }
+    footer .row .col-md-2 .d-flex {
+        justify-content: space-between;
+        flex-direction: row !important;
+    }
+    .login-r form,
+    .signup-section form {
+        width: 90%;
+    }
+    .profile-photo-wrapper {
+        margin-bottom: 30px;
+        height: 340px;
+    }
+    .my-appointments-wrapper .date-filter-wrapper {
+        width: 100%;
+        justify-content: flex-start !important;
+    }
+}
+@media only screen and (max-width: 492px) {
+    .open-content-mbl-pdg,
+    .open-header-mbl-pdg {
+        padding-left: 16% !important;
+    }
+    .sidebar {
+        width: 15%;
+    }
+    .sidebar .links {
+        margin-top: 20px;
+    }
+    .tbl-overflow table {
+        width: 250%;
+    }
+    .custom-section .header-title p,
+    table td,
+    table th,
+    .status-done,
+    .status-approval,
+    .status-cancelled,
+    .status-resched {
+        font-size: 10px !important;
+    }
+    .modal .modal-title {
+        font-size: 16px;
+    }
+    .modal .modal-header button span {
+        font-size: 26px;
+    }
+    .content-body {
+        padding-top: 40px;
+    }
+    .settings-wrapper ul li button {
+        font-size: 11px;
+        font-weight: 600;
+    }
+    .cms-wrapper .img-wrapper {
+        margin: 10px 0;
+        height: 250px;
+    }
+    .hero-section h1 {
+        font-size: 38px;
+        line-height: 1.2;
+    }
+    .homepage .slider-wrapper .slider-caption {
+        top: 20%;
+        padding: 10px;
+    }
+    .homepage-header .container {
+        padding: 0 !important;
+    }
+    .homepage-header .logo {
+        margin-left: -15px;
+    }
+    .services,
+    .about-section,
+    .doctors-section,
+    .contact-section,
+    .reviews-section,
+    .vision-mission-left {
+        padding: 30px 10px;
+    }
+    .about-section h1 {
+        font-size: 44px;
+    }
+    .about-section p,
+    .vision-mission-left p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+    .vision-mission-left {
+        width: 100%;
+        padding-left: 15px;
+        justify-content: center;
+    }
+    .vision-mission-right {
+        display: none;
+    }
+    .vision-mission-left h1 {
+        font-size: 30px;
+    }
+    .services h5,
+    .services h2,
+    .services p,
+    .signup-section h3 {
+        text-align: left !important;
+    }
+    .reviews-section {
+        height: auto;
+    }
+    .reviews-section .reviews-right {
+        padding: 0;
+        height: auto;
+        text-align: center;
+    }
+    .reviews-card p,
+    .login-r img,
+    .login-r form,
+    .signup-section form,
+    .back-to-login-p,
+    .doctor-profile-wrapper .upload-photo-btn {
+        width: 100%;
+    }
+    .login-r form, .signup-section form  {
+        margin: 10px 0;
+    }
+    .reviews-card img {
+        margin: auto;
+    }
+    .login-r,
+    .signup-section {
+        padding: 15px;
+        overflow: auto;
+    }
+    .signup-section {
+        justify-content: flex-start;
+    }
+    .login-r p {
+        text-align: center !important;
+    }
+    .login-r form label, .signup-section form label {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .login-r .form-control, .signup-section .form-control {
+        margin-bottom: 10px;
+    }
+    .profile-photo-wrapper {
+        height: 245px;
+        margin-bottom: 10px;
+    }
+    .upload-wrapper {
+        padding: 10px 0 !important;
+    }
+    .custom-section .more-info {
+        padding: 0;
+        margin-top: 30px;
+    }
+    .custom-section .more-info button {
+        width: auto !important;
+        margin: auto !important;
+        margin-bottom: 2px !important;
+        padding: 4px;
+        font-size: 10px;
+    }
+    .custom-section .calendar {
+        margin-top: 15px;
+    }
+    #calendar .fc-toolbar-title {
+        font-size: 14px;
+    }
+    #calendar button, #calendar button span {
+        font-size: 8px;
+    }
+}
+@media only screen and (max-width: 414px) {
+    .open-content-mbl-pdg,
+    .open-header-mbl-pdg {
+        padding-left: 20% !important;
+    }
+    .sidebar {
+        width: 18%;
+    }
+    #homepageMenu ul li a {
+        text-align: center;
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .custom-section .header-title h5 {
+        font-size: 14px;
+    }
+    .custom-section .header-title p,
+    table td,
+    table th,
+    .status-done,
+    .status-approval,
+    .status-cancelled,
+    .status-resched {
+        font-size: 10px !important;
+    }
+}

@@ -1,0 +1,196 @@
+.cms-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+}
+.cms-wrapper .img-wrapper, .modal .img-wrapper {
+  width: 100%;
+  height: 460px;
+  background-color: #99979c;
+  border-radius: 0;
+  margin-top: 15px;
+}
+.cms-wrapper .tox {
+  height: 430px !important;
+}
+.cms-wrapper input {
+  font-size: 14px;
+}
+.cms-wrapper form label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.cms-wrapper .save-settings, .cms-wrapper .add-services-btn, .search-btn {
+  font-size: 13px;
+  border-radius: 0;
+  padding: 10px;
+  color: #fff;
+  background-color: #135843;
+  margin-top: 30px;
+}
+.cms-wrapper .save-settings img, .cms-wrapper .add-services-btn img, .search-btn img {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+}
+.cms-wrapper .services-tabs li {
+  width: auto !important;
+}
+.cms-wrapper .nav-tabs li {
+  width: 33.3%;
+}
+.cms-wrapper .nav-tabs li button {
+  width: 100%;
+  border-radius: 0;
+  color: inherit;
+}
+.cms-wrapper .nav-tabs li button.active {
+  color: #135843;
+  font-weight: 500;
+}
+.cms-wrapper .tab-content {
+  padding: 20px 0;
+}
+.tox-notification--warning {
+  display: none !important;
+}
+#doctorModalDetails .modal-dialog,
+#clientModalDetails .modal-dialog,
+#viewDoctorFreeScheduleModal .modal-dialog,
+#updateDoctorSchedule .modal-dialog {
+  max-width: 50%;
+}
+#editDoctorSchedule .modal-dialog {
+    max-width: 50%;
+  }
+#doctorModalDetails .modal-body img,
+#clientModalDetails .modal-body img {
+  width: 35%;
+}
+#doctorModalDetails .info-wrapper,
+#clientModalDetails .info-wrapper {
+  width: 65%;
+  background-color: #fafafa;
+  border: 1px solid #dee2e6;
+  padding: 15px;
+}
+#doctorModalDetails .info-wrapper p,
+#clientModalDetails .info-wrapper p {
+  font-size: 14px;
+}
+#viewDoctorFreeScheduleModal table th,
+#viewDoctorFreeScheduleModal table td,
+#viewDoctorFreeScheduleModal label,
+#viewDoctorFreeScheduleModal input,
+#updateDoctorSchedule input,
+#updateDoctorSchedule table td {
+  font-size: 13px !important;
+}
+
+#editDoctorSchedule input,
+#editDoctorSchedule table td {
+  font-size: 13px !important;
+}
+
+#viewDoctorFreeScheduleModal .modal-body h5 {
+  font-size: 13px;
+  margin: 0;
+}
+#viewDoctorFreeScheduleModal input,
+#updateDoctorSchedule input {
+  width: auto;
+}
+
+#editDoctorSchedule input {
+    width: auto;
+  }
+
+#deleteConfirmationModal p {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+#deleteConfirmationModal .modal-body img {
+  width: 100px;
+  height: 100px;
+}
+#updateDoctorSchedule .add-single-sched,
+#updateDoctorSchedule .add-recurring-sched {
+  background-color: #0000000d;
+  border: 2px dashed #dee2e6;
+  padding: 0 10px;
+  height: 33.5px;
+  margin: 10px 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#editDoctorSchedule .add-single-sched,
+#editDoctorSchedule .add-recurring-sched {
+  background-color: #0000000d;
+  border: 2px dashed #dee2e6;
+  padding: 0 10px;
+  height: 33.5px;
+  margin: 10px 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#updateDoctorSchedule .add-single-sched:hover,
+#updateDoctorSchedule .add-recurring-sched:hover {
+  background-color: #dee2e6;
+}
+
+#editDoctorSchedule .add-single-sched:hover,
+#editDoctorSchedule .add-recurring-sched:hover {
+  background-color: #dee2e6;
+}
+
+#updateDoctorSchedule #singleScheduleDiv {
+  display: none !important;
+}
+#updateDoctorSchedule .add-sched-div {
+  display: none;
+  padding: 8px;
+  background-color: #0000000d;
+  border: 1px solid #dee2e6;
+  margin: 10px 0;
+}
+#updateDoctorSchedule .add-sched-div p {
+  all: unset;
+}
+
+#editDoctorSchedule #singleScheduleDiv {
+    display: none !important;
+  }
+#editDoctorSchedule .add-sched-div {
+display: none;
+padding: 8px;
+background-color: #0000000d;
+border: 1px solid #dee2e6;
+margin: 10px 0;
+}
+#editDoctorSchedule .add-sched-div p {
+all: unset;
+}
+
+#addServicesModal textarea, #viewServicesModal textarea {
+  height: 130px !important;
+}
+.modal .img-wrapper {
+  height: 340px;
+  margin-bottom: 20px;
+}
+.modal .img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.tox .tox-notifications-container .tox-notification--warning {
+    display: none !important;
+}

@@ -21,6 +21,9 @@ class DoctorAppointmentController extends Controller
 
         $appointments = Appointment::with('bookedUser')
         ->orderBy('date_schedule', 'asc') // Sort by date_schedule in ascending order
+        ->whereHas('bookedUser', function ($query) {
+            $query->whereNull('deleted_at');
+        })
         ->paginate(10);
 
         $countunread = Notification::where('is_read_by_admin', false)->count();

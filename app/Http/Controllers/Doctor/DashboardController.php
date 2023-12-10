@@ -15,7 +15,11 @@ class DashboardController extends Controller
     {
         $currentMonth = Carbon::now()->month;
 
-        $appointments =  Appointment::where('doctor_id', auth()->user()->id)->paginate(10);
+        $appointments =  Appointment::where('doctor_id', auth()->user()->id)
+        ->whereHas('bookedUser', function ($query) {
+            $query->whereNull('deleted_at');
+        })
+        ->paginate(10);
         $countunread = Notification::where('is_read_by_admin', false)->count();
         $notifications = Notification::adminNotifications()->get();
 

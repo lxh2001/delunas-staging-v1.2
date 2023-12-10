@@ -142,7 +142,7 @@
                   </tr>
                 @empty
                     <tr>
-                        <td colspan="6" class="text-center" > No Appointments Found</td>
+                        <td colspan="7" class="text-center" > No Appointments Found</td>
                     </tr>
                 @endforelse
             </tbody>

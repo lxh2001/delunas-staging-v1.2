@@ -225,6 +225,7 @@ class MyAppointmentsController extends Controller
 
         $userHasUncompletedAppointments = Appointment::where('user_id', auth()->user()->id)
         ->where('status', '!=', 'done')
+        ->where('status', '!=', 'cancelled')
         ->exists();
 
         return response()->json([

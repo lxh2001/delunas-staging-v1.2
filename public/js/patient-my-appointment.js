@@ -84,7 +84,7 @@ const attachGetDoctorAvailabilities=()=> {
 const initGetAvailabilities= (doctor_id, filter_date, service, serviceName, doctorName) => {
 
     $.ajax({
-        url: `/admin/doctor/get-availabilities/${doctor_id}/${filter_date}`,
+        url: `/patient/doctor/get-availabilities/${doctor_id}/${filter_date}`,
         type: "GET",
         dataType: "json",
         contentType: "application/json",

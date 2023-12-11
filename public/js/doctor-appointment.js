@@ -85,7 +85,7 @@ const attachApproveAppointmentBtn=()=> {
 
         $.ajax({
             type: "POST",
-            url: '/admin/approve-appointment',
+            url: '/doctor/approve-appointment',
             data: JSON.stringify(data),
             dataType: "json",
             contentType: "application/json",
@@ -171,7 +171,7 @@ const attachCancelAppointment=()=> {
 
 const initGetAvailabilities=(doctor_id, filter_date)=> {
     $.ajax({
-        url: `/admin/doctor/get-availabilities/${doctor_id}/${filter_date}`,
+        url: `/doctor/get-availabilities/${doctor_id}/${filter_date}`,
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -261,7 +261,7 @@ const attachRescheduleAppointmentBtn=()=> {
 const postAjaxRequest=(appointmentObj)=> {
     $.ajax({
         type: "POST",
-        url: '/admin/reschedule-appointment',
+        url: '/doctor/reschedule-appointment',
         data: JSON.stringify(appointmentObj),
         dataType: "json",
         contentType: "application/json",
@@ -291,7 +291,7 @@ const postAjaxRequest=(appointmentObj)=> {
 const cancelAppointmentAjaxRequest=(appointmentObj)=> {
     $.ajax({
         type: "POST",
-        url: '/admin/cancel-appointment',
+        url: '/doctor/cancel-appointment',
         data: JSON.stringify(appointmentObj),
         dataType: "json",
         contentType: "application/json",
@@ -350,7 +350,7 @@ const attachDeclineRescheduleBtn=()=> {
 const approveResheduleAjaxRequest=(appointmentObj)=> {
     $.ajax({
         type: "POST",
-        url: '/admin/approve-reschedule-appointment',
+        url: '/doctor/approve-reschedule-appointment',
         data: JSON.stringify(appointmentObj),
         dataType: "json",
         contentType: "application/json",
@@ -380,7 +380,7 @@ const approveResheduleAjaxRequest=(appointmentObj)=> {
 const declineResheduleAjaxRequest=(appointmentObj)=> {
     $.ajax({
         type: "POST",
-        url: '/admin/decline-reschedule-appointment',
+        url: '/doctor/decline-reschedule-appointment',
         data: JSON.stringify(appointmentObj),
         dataType: "json",
         contentType: "application/json",
@@ -448,7 +448,7 @@ const attachMarkAsDoneBtn=()=> {
 const markAsDoneAjaxRequest=(appointmentObj)=> {
     $.ajax({
         type: "POST",
-        url: '/admin/mark-as-done-appointment',
+        url: '/doctor/mark-as-done-appointment',
         data: JSON.stringify(appointmentObj),
         dataType: "json",
         contentType: "application/json",

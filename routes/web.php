@@ -46,7 +46,7 @@ Route::middleware(['auth:sanctum', 'userType:admin'])->group(function () {
     Route::post('/admin/mark-as-done-appointment', [\App\Http\Controllers\Admin\DashboardController::class, 'doneAppointment']);
 
     //GLOBAL ROUTES FOR PATIENT
-    // Route::post('/admin/update-notification', [\App\Http\Controllers\Admin\DashboardController::class, 'updateNotifications']);
+    Route::post('/admin/update-notification', [\App\Http\Controllers\Admin\DashboardController::class, 'updateNotifications']);
 
     //ACCOUNT
     Route::get('/admin/accounts', [AccountController::class, 'index'])->name('admin.accounts');
@@ -148,7 +148,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     // Route::post('/admin/mark-as-done-appointment', [\App\Http\Controllers\Admin\DashboardController::class, 'doneAppointment']);
 
     // //GLOBAL ROUTES FOR PATIENT
-    Route::post('/admin/update-notification', [\App\Http\Controllers\Admin\DashboardController::class, 'updateNotifications']);
+    // Route::post('/admin/update-notification', [\App\Http\Controllers\Admin\DashboardController::class, 'updateNotifications']);
 
     // //ACCOUNT
     // Route::get('/admin/accounts', [AccountController::class, 'index'])->name('admin.accounts');
@@ -189,7 +189,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     // Route::post('/patient/send-feedback', [\App\Http\Controllers\Patient\DashboardController::class, 'sendFeedback']);
 
     // //GLOBAL ROUTES FOR PATIENT
-    Route::post('/patient/update-notification', [\App\Http\Controllers\Patient\DashboardController::class, 'updateNotifications']);
+    // Route::post('/patient/update-notification', [\App\Http\Controllers\Patient\DashboardController::class, 'updateNotifications']);
 
     // //PATIENT MY APPOINTMENTS
     // Route::get('/patient/my-appointments', [\App\Http\Controllers\Patient\MyAppointmentsController::class, 'index'])->name('patient.appointment');

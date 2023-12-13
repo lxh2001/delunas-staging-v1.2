@@ -117,6 +117,18 @@ function toggleMobileMenu() {
   }
 }
 
+// toggle Chatbox
+function toggleChatbox() {
+  let chatbox = document.getElementById('chatbox');
+
+  if (chatbox.style.display === 'none' || chatbox.style.display === '') {
+    chatbox.style.display = 'block';
+  } else {
+    chatbox.style.display = 'none';
+  }
+}
+
+
 
 // function for TinyMCE text editor
 tinymce.init({

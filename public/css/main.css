@@ -144,6 +144,7 @@ header .logo {
 }
 main.homepage {
   margin-top: -72px;
+  display: relative;
 }
 .hero-section,
 .services,
@@ -748,4 +749,144 @@ footer a:hover {
 
 .tox-notification--warning {
     display: none !important;
+}
+
+.open-chatbox {
+  position: fixed;
+  z-index: 999;
+  bottom: 20px;
+  right: 20px;
+  background-color: #135843;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,.25);
+}
+
+.open-chatbox img {
+  width: 60%;
+}
+
+.homepage #chatbox {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  background-color: #eaeef3;
+  box-shadow: 0 4px 16px rgba(0,0,0,.25);
+  border-radius: 15px;
+  width: 370px;
+  height: 640px;
+}
+
+.homepage #chatbox .header {
+  box-shadow: 0 9.5px 12.7px 0 rgba(0,0,0,.05);
+  padding: 20px;
+  background-color: #fff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+
+  display: flex;
+  gap: 10px;
+}
+
+.homepage #chatbox .header .logo {
+  border-radius: 50%;
+  background-color: #135843;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.homepage #chatbox .header .logo .dot {
+  background-color: #69de40;
+  border-radius: 50%;
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  bottom: 0;
+  right: 4px;
+  border: 1px solid #fff;
+}
+
+.homepage #chatbox .header .close-chatbox {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+}
+
+.homepage #chatbox .header .close-chatbox img {
+  width: 24px;
+}
+
+.homepage #chatbox .header h5 {
+  margin: 0;
+}
+
+.homepage #chatbox .header p {
+  margin: 0;
+  font-size: 13px;
+  color: #9ba6b3;
+}
+
+.homepage #chatbox .header .logo img {
+  width: 70%;
+}
+
+.homepage #chatbox .body {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.homepage #chatbox .body .message {
+  background-color: #fff;
+  border-radius: 20px;
+  word-wrap: break-word;
+  font-size: 15px;
+  line-height: 20px;
+  max-width: 100%;
+  padding: 15px 17px;
+  white-space: pre-wrap;
+}
+
+.homepage #chatbox .body .topics {
+  background-color: #fff;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #135843;
+  text-align: center;
+  border: 2px solid #135843;
+  padding: 10px 17px;
+  font-weight: 600;
+}
+
+.homepage #chatbox .header p {
+  margin: 0;
+}
+
+.homepage #chatbox .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #135843;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.homepage #chatbox .footer p {
+  text-align: center;
+  font-size: 11px;
+  margin: 0;
+  color: #fff;
+  padding: 12px;
 }

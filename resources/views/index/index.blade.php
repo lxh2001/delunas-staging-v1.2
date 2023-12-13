@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{{ asset('/css/main.css') }}" />
     <link rel="stylesheet" href="{{ asset('/css/media-queries.css') }}" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <!-- Links for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -553,6 +555,39 @@
           </div>
         </div>
       </section>
+
+      <!-- Chatbox -->
+      <button class="open-chatbox" onclick="toggleChatbox()"><img src="{{ asset('/icons/chatbox.png') }}" /></button>
+
+      <div id="chatbox" class="animate__animated animate__fadeInUp animate__faster">
+        <div class="header">
+          <div class="logo">
+            <img src="{{ asset('/icons/footer-tooth.png') }}" />
+            <div class="dot"></div>
+          </div>
+          <div class="d-flex flex-column justify-content-center gap-2">
+            <h5>Chatbot<h5>
+            <p>Online</p>
+          </div>
+
+          <button class="close-chatbox" onclick="toggleChatbox()"><img src="{{ asset('/icons/close.png') }}" /></button>
+        </div>
+
+        <div class="body">
+          <div class="message">Hi there, great to see you!</div>
+          <div class="message">What information are you looking for? Please use the navigation below to start.</div>
+
+          <div class="my-2 d-flex flex-column gap-2">
+            <a href="" class="topics">Dynamic Topic 1</a>
+            <a href=""  class="topics">Dynamic Topic 2</a>
+            <a href=""  class="topics">Dynamic Topic 3</a>
+          </div>
+        </div>
+
+        <div class="footer">
+          <p>Powered by DeLunas Dental Clinic</p>
+        </div>
+      </div>
     </main>
 
     <!-- FOOTER SECTION -->

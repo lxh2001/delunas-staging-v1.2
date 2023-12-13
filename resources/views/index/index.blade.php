@@ -557,9 +557,9 @@
       </section>
 
       <!-- Chatbox -->
-      <button class="open-chatbox" onclick="toggleChatbox()"><img src="{{ asset('/icons/chatbox.png') }}" /></button>
+      {{-- <button class="open-chatbox" onclick="toggleChatbox()"><img src="{{ asset('/icons/chatbox.png') }}" /></button> --}}
 
-      <div id="chatbox" class="animate__animated animate__fadeInUp animate__faster">
+      {{-- <div id="chatbox" class="animate__animated animate__fadeInUp animate__faster">
         <div class="header">
           <div class="logo">
             <img src="{{ asset('/icons/footer-tooth.png') }}" />
@@ -587,7 +587,7 @@
         <div class="footer">
           <p>Powered by DeLunas Dental Clinic</p>
         </div>
-      </div>
+      </div> --}}
     </main>
 
     <!-- FOOTER SECTION -->

@@ -121,9 +121,11 @@ class DashboardController extends Controller
                         $newStartTime = Carbon::parse($newStartTime)->addMinutes($timeDifference)->toTimeString();
                         $newEndTime = Carbon::parse($newEndTime)->addMinutes($timeDifference)->toTimeString();
                         $newSlotNumber++;
+
+                        Mail::to($nextAppointment->bookedUser->email)->send(new EmailUpdateQueue($nextAppointment));
                     }
-                    $affectedUserEmails = $nextAppointments->pluck('bookedUser.email')->toArray();
-                    Mail::to($affectedUserEmails)->send(new EmailUpdateQueue($appointment));
+                    // $affectedUserEmails = $nextAppointments->pluck('bookedUser.email')->toArray();
+                    // Mail::to($affectedUserEmails)->send(new EmailUpdateQueue($appointment));
                 }
 
                 // Update the status of the current appointment to 'cancelled'

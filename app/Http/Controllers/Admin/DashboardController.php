@@ -9,6 +9,7 @@ use App\Http\Requests\RescheduledAppointmentRequest;
 use App\Mail\AppointmentEmailNotif;
 use App\Mail\CancelAppointmentEmailNotif;
 use App\Mail\DeclineAppointmentEmailNotif;
+use App\Mail\EmailUpdateQueue;
 use App\Mail\RescheduleAppointmentEmailNotif;
 use App\Models\Appointment;
 use App\Models\DoctorAvailability;
@@ -30,6 +31,7 @@ class DashboardController extends Controller
         ->whereHas('bookedUser', function ($query) {
             $query->whereNull('deleted_at');
         })
+        ->orderBy('slot_no', 'asc')
         ->with(['bookedUser','doctor'])->paginate(10);
 
         $countunread = Notification::where('is_read_by_admin', false)->count();
@@ -95,6 +97,36 @@ class DashboardController extends Controller
             $appointment = Appointment::find($validatedRequest['appointment_id']);
 
             if($appointment) {
+                $nextAppointments = Appointment::where('doctor_id', $appointment->doctor_id)
+                ->where('date_schedule', $appointment->date_schedule)
+                ->where('status', '!=', 'cancelled')
+                ->where('status', '!=', 'done')
+                ->where('slot_no', '>', $appointment->slot_no)
+                ->orderBy('slot_no')
+                ->get();
+
+                if(count($nextAppointments) > 0) {
+                     // Calculate the time difference between slots
+                    $timeDifference = 60; // Assuming you have a duration_minutes attribute
+                    // Update the slot numbers for the next appointments
+                    $newSlotNumber = $appointment->slot_no;
+                    $newStartTime = $appointment->start_time;
+                    $newEndTime = $appointment->end_time;
+                    foreach ($nextAppointments as $nextAppointment) {
+                        $nextAppointment->slot_no = $newSlotNumber;
+                        $nextAppointment->start_time = $newStartTime;
+                        $nextAppointment->end_time = $newEndTime;
+                        $nextAppointment->save();
+
+                        $newStartTime = Carbon::parse($newStartTime)->addMinutes($timeDifference)->toTimeString();
+                        $newEndTime = Carbon::parse($newEndTime)->addMinutes($timeDifference)->toTimeString();
+                        $newSlotNumber++;
+                    }
+                    $affectedUserEmails = $nextAppointments->pluck('bookedUser.email')->toArray();
+                    Mail::to($affectedUserEmails)->send(new EmailUpdateQueue($appointment));
+                }
+
+                // Update the status of the current appointment to 'cancelled'
                 $validatedRequest['status'] = 'cancelled';
                 $appointment->fill($validatedRequest);
                 $appointment->save();

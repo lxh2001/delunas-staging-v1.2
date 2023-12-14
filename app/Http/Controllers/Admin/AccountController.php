@@ -182,6 +182,8 @@ class AccountController extends Controller
                     $countApprovedAppointments = Appointment::where('availability_id', $availability->id)
                     ->whereDate('date_schedule', $filterDate)
                     ->where('status', 'approved')
+                    ->where('status', '!=', 'cancelled')
+                    ->where('status', '!=', 'done')
                     ->count();
 
                     // Add the availability details to the available slots array

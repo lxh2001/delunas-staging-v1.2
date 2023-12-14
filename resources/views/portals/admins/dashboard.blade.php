@@ -64,7 +64,7 @@
                 @forelse ( $appointments as  $appointment)
                 <tr>
 
-                    <td>{{ $appointment->slot_no }}</td>
+                    <td>{{ ($appointment->status == 'cancelled') ? '-' :  $appointment->slot_no }}</td>
                     <td>
                         {{ \Carbon\Carbon::parse($appointment->date_schedule)->format('F j, Y') }}
                         -

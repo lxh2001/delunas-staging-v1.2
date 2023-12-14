@@ -216,16 +216,16 @@
   </div>
 
   <!-- Modal for SMS OTP -->
-<div class="modal fade appointment-info-modal" id="smsOTPModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade appointment-info-modal" id="smsOTPModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
     <form>
         @csrf
         <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
             <h5 class="modal-title text-center">Click "Send OTP" to generate OTP</h5>
-            <button type="button" class="btn close" data-dismiss="modal">
+            {{-- <button type="button" class="btn close" data-dismiss="modal">
                 <span aria-hidden="true">&times;</span>
-            </button>
+            </button> --}}
             </div>
             <div class="modal-body">
                 <div class="d-flex align-items-center gap-1" id="generateOTP">

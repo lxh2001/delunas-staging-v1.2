@@ -32,6 +32,7 @@ Route::get('/verify-email/{verification_code}', [AuthController::class,'verifyEm
 Route::get('/reset-password/{token}/{email}', [AuthController::class,'resetPasswordPage'])->name('reset_password');
 Route::post('/reset-password', [AuthController::class,'resetPassword'])->name('submit_reset_password');
 Route::post('/forgot-password', [AuthController::class,'forgotPassword'])->name('forgot_password');
+Route::post('/phone-auth', [AuthController::class,'phoneAuth']);
 
 Route::middleware(['auth:sanctum', 'userType:admin'])->group(function () {
     //DASHBOARD

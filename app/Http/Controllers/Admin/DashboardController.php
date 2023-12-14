@@ -122,7 +122,7 @@ class DashboardController extends Controller
 
                 Mail::to([$appointment->bookedUser->email, $appointment->doctor->email])->send(new CancelAppointmentEmailNotif($appointment));
 
-                return response()->json(['status' => true, 'message' => 'Appointment Successfully Rescheduled']);
+                return response()->json(['status' => true, 'message' => 'Appointment Successfully Cancelled']);
             } else {
                 DB::rollBack();
                 return response()->json([

@@ -22,7 +22,8 @@ class UserSeeder extends Seeder
             'contact_number' => '09555555555',
             'password' => Hash::make('password'),
             'user_type' => 'admin',
-            'email_verified_at' => Carbon::now()
+            'email_verified_at' => Carbon::now(),
+            'verified_otp' => true
         ]);
 
         User::insert([
@@ -32,7 +33,8 @@ class UserSeeder extends Seeder
             'contact_number' => '09555555555',
             'password' => Hash::make('password'),
             'user_type' => 'user',
-            'email_verified_at' => Carbon::now()
+            'email_verified_at' => Carbon::now(),
+            'verified_otp' => true
         ]);
 
         User::insert([
@@ -42,7 +44,8 @@ class UserSeeder extends Seeder
             'contact_number' => '09555555555',
             'password' => Hash::make('password'),
             'user_type' => 'doctor',
-            'email_verified_at' => Carbon::now()
+            'email_verified_at' => Carbon::now(),
+            'verified_otp' => true
         ]);
     }
 }

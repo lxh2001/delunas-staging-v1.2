@@ -31,7 +31,8 @@ class User extends Authenticatable
         'user_type',
         'remember_token',
         'email_verified_at',
-        'birthdate'
+        'birthdate',
+        'verified_otp'
     ];
 
     /**

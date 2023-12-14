@@ -38,7 +38,7 @@ class AuthController extends Controller
         if ($user) {
 
             //Check if user's email is already verified.
-            if($user->email_verified_at) {
+            if($user->verified_otp) {
 
                 //Login the user
                 if (!Auth::attempt(['email' => $validatedRequest['email'], 'password' => $validatedRequest['password']])) {
@@ -64,9 +64,7 @@ class AuthController extends Controller
 
 
             } else {
-
-                return redirect()->route('auth.index')->with('error_message', 'Your email address is not verified. Please check your email for a verification link.');
-
+                return redirect()->route('auth.index')->with('error_message', 'You are not verified. Please complete the verification process.');
             }
         } else {
             return redirect()->route('auth.index')->with('error_message', 'Invalid Username and Password');
@@ -102,9 +100,16 @@ class AuthController extends Controller
             }
 
             // Send an email with the verification link
-            Mail::to($user->email)->send(new EmailVerification($user));
+            // Mail::to($user->email)->send(new EmailVerification($user));
             DB::commit();
-            return redirect()->route('auth.index')->with('success_message', 'Your account has been created successfully. Please check your email for a verification link.');
+
+            return redirect()->route('auth.index')->with([
+                // 'success_message' => 'Your account has been created successfully. Please check your email for a verification link.',
+                'success_sms' => 'Your account has been created successfully.',
+                'contact_number'  => $user->contact_number,
+                'user_id' => $user->id
+            ]);
+
         }  catch (\Throwable $th) {
             DB::rollBack();
 
@@ -138,6 +143,24 @@ class AuthController extends Controller
              return redirect()->route('patient.appointment', ['book_now' => $bookNow, 'service' => $service]);
          }
          return redirect()->route('patient.dashboard');
+    }
+
+    public function phoneAuth(Request $request)
+    {
+        $userId = $request['userId'];
+        $user = User::find($userId);
+
+        $user->update([
+            'email_verified_at' => Carbon::now(),
+            'verified_otp' => true
+        ]);
+
+         // Log in the user after verification
+         Auth::login($user);
+        //  if($bookNow) {
+        //      return redirect()->route('patient.appointment', ['book_now' => $bookNow, 'service' => $service]);
+        //  }
+         return true;
     }
 
     public function logout(Request $request)

@@ -48,6 +48,9 @@ class AccountController extends Controller
             //Add user_type as a doctor
             $validatedRequest['user_type'] = 'doctor';
 
+            //Verified OTP
+            $validatedRequest['verified_otp'] = true;
+
             //Check if has image
             if($request->has('image')) {
 

@@ -39,10 +39,13 @@ class HomepageController extends Controller
 
         $validatedRequest = $request->validated();
         if($request->has('image')) {
-            $fileName = time() . '.' . $request->image->extension();
-            $filePath = $request->image->storeAs('images/uploads', $fileName);
+            // $fileName = time() . '.' . $request->image->extension();
+            // $filePath = $request->image->storeAs('images/uploads', $fileName);
 
-            $validatedRequest['image_url'] = $filePath;
+            // $validatedRequest['image_url'] = $filePath;
+            $imageName = time() . '_' . $request->image->getClientOriginalName();
+            $request->image->storeAs('public', $imageName);
+            $data['image_url'] = $imageName;
         }
 
         HomeSetting::updateOrCreate(

@@ -45,7 +45,7 @@ class HomepageController extends Controller
             // $validatedRequest['image_url'] = $filePath;
             $imageName = time() . '_' . $request->image->getClientOriginalName();
             $request->image->storeAs('public', $imageName);
-            $data['image_url'] = $imageName;
+            $validatedRequest['image_url'] = $imageName;
         }
 
         HomeSetting::updateOrCreate(
@@ -69,7 +69,7 @@ class HomepageController extends Controller
             // $validatedRequest['image_url'] = $filePath;
             $imageName = time() . '_' . $request->image->getClientOriginalName();
             $request->image->storeAs('public', $imageName);
-            $data['image_url'] = $imageName;
+            $validatedRequest['image_url'] = $imageName;
         }
 
         AboutUsSetting::updateOrCreate(
@@ -93,7 +93,7 @@ class HomepageController extends Controller
             // $validatedRequest['image_url'] = $filePath;
             $imageName = time() . '_' . $request->image->getClientOriginalName();
             $request->image->storeAs('public', $imageName);
-            $data['image_url'] = $imageName;
+            $validatedRequest['image_url'] = $imageName;
         }
 
         MissionVisionSetting::updateOrCreate(
@@ -148,7 +148,7 @@ class HomepageController extends Controller
             // $validatedRequest['image_url'] = $filePath;
             $imageName = time() . '_' . $request->image->getClientOriginalName();
             $request->image->storeAs('public', $imageName);
-            $data['image_url'] = $imageName;
+            $validatedRequest['image_url'] = $filePath;
         }
 
         ServicesSetting::create($validatedRequest);
@@ -167,7 +167,7 @@ class HomepageController extends Controller
             // $service->image_url = $filePath;
             $imageName = time() . '_' . $request->image->getClientOriginalName();
             $request->image->storeAs('public', $imageName);
-            $data['image_url'] = $imageName;
+            $validatedRequest['image_url'] = $imageName;
         }
 
         $service->title = $validatedRequest['title'];

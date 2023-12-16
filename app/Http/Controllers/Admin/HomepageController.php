@@ -172,7 +172,7 @@ class HomepageController extends Controller
 
         $service->title = $validatedRequest['title'];
         $service->description = $validatedRequest['description'];
-        $service->update();
+        $service->save();
 
         return response()->json([ 'status' => true,'message' => 'Service Updated Successfully' ]);
     }

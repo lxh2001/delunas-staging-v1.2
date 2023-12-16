@@ -43,7 +43,8 @@ class HomepageController extends Controller
             // $filePath = $request->image->move('images/uploads/', $fileName);
 
             // $fileName = time().'.'.$request->image->extension();
-            $directory = 'images/uploads';
+            // $directory = 'images/uploads/';
+            $directory = public_path('images/uploads/');
             $filePath = Storage::putFileAs($directory, $request->file('image'), $fileName);
             $validatedRequest['image_url'] = $filePath;
         }

@@ -173,7 +173,7 @@
       <section id="about" class="about-section">
         <div class="row m-0 h-100">
           <div class="col-6">
-            <img src="/storage/{{ asset($aboutus->image_url) }}" />
+            <img src="{{ asset('/storage/', $aboutus->image_url) }}" />
           </div>
           <div class="col-6 d-flex flex-column justify-content-center">
             <h5>Who We Are</h5>
@@ -228,7 +228,7 @@
             @forelse ($services as  $service)
             <div class="services-card">
                 <div class="image-wrapper">
-                  <img src="/storage/{{ asset($service->image_url) }}" />
+                  <img src="{{ asset('/storage/'.$service->image_url) }}" />
                   <div class="overlay"></div>
                 </div>
                 <div>

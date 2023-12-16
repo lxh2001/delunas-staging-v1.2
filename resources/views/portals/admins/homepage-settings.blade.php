@@ -64,7 +64,7 @@
                         <input type="file" id="home1" name="image" class="form-control" />
                         <div class="img-wrapper">
                         @if($homebanners)
-                            <img id="viewHome1" src="{{ asset('/'. ($homebanners[0]->image_url ?? 'img/hero-banner1.png') ) }}" style="width: 100%; height:460px" alt="image description">
+                            <img id="viewHome1" src="{{ asset('/storage/'. ($homebanners[0]->image_url ?? 'img/hero-banner1.png') ) }}" style="width: 100%; height:460px" alt="image description">
                         @else
                             <img id="viewHome1" src="" />
                         @endif
@@ -99,7 +99,7 @@
 
                         <div class="img-wrapper">
                         @if($homebanners)
-                            <img id="viewHome2" src="{{ asset('/'. ($homebanners[1]->image_url ?? 'img/hero-banner1.png') ) }}" style="width: 100%; height:460px" alt="image description">
+                            <img id="viewHome2" src="{{ asset('/storage/'. ($homebanners[1]->image_url ?? 'img/hero-banner1.png') ) }}" style="width: 100%; height:460px" alt="image description">
                         @else
                             <img id="viewHome2" src="" />
                         @endif
@@ -134,7 +134,7 @@
 
                         <div class="img-wrapper">
                         @if($homebanners)
-                            <img  id="viewHome3" src="{{ asset('/'. ($homebanners[2]->image_url ?? 'img/hero-banner1.png') ) }}" style="width: 100%; height:460px" alt="image description">
+                            <img  id="viewHome3" src="{{ asset('/storage/'. ($homebanners[2]->image_url ?? 'img/hero-banner1.png') ) }}" style="width: 100%; height:460px" alt="image description">
                         @else
                             <img id="viewHome3" src="" />
                         @endif

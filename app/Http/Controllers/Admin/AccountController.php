@@ -54,14 +54,18 @@ class AccountController extends Controller
             //Check if has image
             if($request->has('image')) {
 
-                //Create file name
-                $fileName = time() . '.' . $request->image->extension();
+                // //Create file name
+                // $fileName = time() . '.' . $request->image->extension();
 
-                //Move the image to uploads folder
-                $filePath = $request->image->move('img/uploads/', $fileName);
+                // //Move the image to uploads folder
+                // $filePath = $request->image->move('img/uploads/', $fileName);
 
-                //Add the filePath
-                $validatedRequest['image_url'] = $filePath;
+                // //Add the filePath
+                // $validatedRequest['image_url'] = $filePath;
+
+                $imageName = time() . '_' . $request->image->getClientOriginalName();
+                $request->image->storeAs('public', $imageName);
+                $data['image_url'] = $imageName;
             }
 
             //Create the user

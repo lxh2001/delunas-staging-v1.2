@@ -63,10 +63,13 @@ class HomepageController extends Controller
 
         $validatedRequest = $request->validated();
         if($request->has('image')) {
-            $fileName = time() . '.' . $request->image->extension();
-            $filePath = $request->image->move('images/uploads/', $fileName);
+            // $fileName = time() . '.' . $request->image->extension();
+            // $filePath = $request->image->move('images/uploads/', $fileName);
 
-            $validatedRequest['image_url'] = $filePath;
+            // $validatedRequest['image_url'] = $filePath;
+            $imageName = time() . '_' . $request->image->getClientOriginalName();
+            $request->image->storeAs('public', $imageName);
+            $data['image_url'] = $imageName;
         }
 
         AboutUsSetting::updateOrCreate(
@@ -84,10 +87,13 @@ class HomepageController extends Controller
 
         $validatedRequest = $request->validated();
         if($request->has('image')) {
-            $fileName = time() . '.' . $request->image->extension();
-            $filePath = $request->image->move('images/uploads/', $fileName);
+            // $fileName = time() . '.' . $request->image->extension();
+            // $filePath = $request->image->move('images/uploads/', $fileName);
 
-            $validatedRequest['image_url'] = $filePath;
+            // $validatedRequest['image_url'] = $filePath;
+            $imageName = time() . '_' . $request->image->getClientOriginalName();
+            $request->image->storeAs('public', $imageName);
+            $data['image_url'] = $imageName;
         }
 
         MissionVisionSetting::updateOrCreate(
@@ -135,11 +141,14 @@ class HomepageController extends Controller
         $validatedRequest = $request->validated();
 
         if($request->has('image')) {
-            $fileName = time() . '.' . $request->image->extension();
-            // $request->image->storeAs('public/img/uploads', $fileName);
-            $filePath = $request->image->move('img/uploads/', $fileName);
+            // $fileName = time() . '.' . $request->image->extension();
+            // // $request->image->storeAs('public/img/uploads', $fileName);
+            // $filePath = $request->image->move('img/uploads/', $fileName);
 
-            $validatedRequest['image_url'] = $filePath;
+            // $validatedRequest['image_url'] = $filePath;
+            $imageName = time() . '_' . $request->image->getClientOriginalName();
+            $request->image->storeAs('public', $imageName);
+            $data['image_url'] = $imageName;
         }
 
         ServicesSetting::create($validatedRequest);
@@ -152,10 +161,13 @@ class HomepageController extends Controller
         $validatedRequest = $request->validated();
 
         if($request->has('image')) {
-            $fileName = time() . '.' . $request->image->extension();
-            // $request->image->storeAs('public/img/uploads', $fileName);
-            $filePath = $request->image->move('img/uploads/', $fileName);
-            $service->image_url = $filePath;
+            // $fileName = time() . '.' . $request->image->extension();
+            // // $request->image->storeAs('public/img/uploads', $fileName);
+            // $filePath = $request->image->move('img/uploads/', $fileName);
+            // $service->image_url = $filePath;
+            $imageName = time() . '_' . $request->image->getClientOriginalName();
+            $request->image->storeAs('public', $imageName);
+            $data['image_url'] = $imageName;
         }
 
         $service->title = $validatedRequest['title'];

@@ -25,10 +25,13 @@ class ProfileController extends Controller
             DB::beginTransaction();
 
             if($request->has('image')) {
-                $fileName = time() . '.' . $request->image->extension();
-                $filePath = $request->image->move('images/uploads/', $fileName);
+                // $fileName = time() . '.' . $request->image->extension();
+                // $filePath = $request->image->move('images/uploads/', $fileName);
 
-                $validatedRequest['image_url'] = $filePath;
+                // $validatedRequest['image_url'] = $filePath;
+                $imageName = time() . '_' . $request->image->getClientOriginalName();
+                $request->image->storeAs('public', $imageName);
+                $data['image_url'] = $imageName;
             }
 
             $user = auth()->user();

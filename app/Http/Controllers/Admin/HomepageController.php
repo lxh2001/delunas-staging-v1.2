@@ -40,7 +40,7 @@ class HomepageController extends Controller
         $validatedRequest = $request->validated();
         if($request->has('image')) {
             $fileName = time() . '.' . $request->image->extension();
-            $filePath = $request->image->storeAs('images/uploads/', $fileName);
+            $filePath = $request->image->storeAs('images/uploads', $fileName);
 
             $validatedRequest['image_url'] = $filePath;
         }

@@ -89,7 +89,7 @@ const attachEditServiceModalListener=()=> {
     $(document).on('click', '.editServiceModalBtn', function() {
         let serviceObj = $(this).data('service');
         $('#editServiceId').val(serviceObj.id);
-        $('#viewEditImage').attr('src', `/${serviceObj.image_url}`);
+        $('#viewEditImage').attr('src', `/storage/${serviceObj.image_url}`);
         $('#editTitle').val(serviceObj.title);
         tinymce.get("editDescription").setContent(serviceObj.description);
     });

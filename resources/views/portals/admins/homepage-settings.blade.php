@@ -180,7 +180,7 @@
               <input id="home4" name="image" type="file" class="form-control" />
               <div class="img-wrapper">
                 @if($mv)
-                    <img id="viewHome4" src="{{ asset($mv->image_url) }}" style="width: 100%; height:460px" alt="image description">
+                    <img id="viewHome4" src="{{ asset('/storage/'.$mv->image_url) }}" style="width: 100%; height:460px" alt="image description">
                 @else
                     <img id="viewHome4" src=""  style="width: 100%; height:460px" />
                 @endif
@@ -282,7 +282,7 @@
                 <input id="home5" name="image" type="file" class="form-control" />
                 <div class="img-wrapper">
                   @if($aboutus)
-                      <img id="viewHome5" src="{{ asset($aboutus->image_url) }}" style="width: 100%; height:460px" alt="image description">
+                      <img id="viewHome5" src="{{ asset('/storage/'.$aboutus->image_url) }}" style="width: 100%; height:460px" alt="image description">
                   @else
                       <img id="viewHome5" src="" style="width: 100%; height:460px" />
                   @endif

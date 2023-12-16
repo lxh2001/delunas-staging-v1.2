@@ -65,7 +65,7 @@ class AccountController extends Controller
 
                 $imageName = time() . '_' . $request->image->getClientOriginalName();
                 $request->image->storeAs('public', $imageName);
-                $data['image_url'] = $imageName;
+                $validatedRequest['image_url'] = $imageName;
             }
 
             //Create the user

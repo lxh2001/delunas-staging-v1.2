@@ -103,7 +103,7 @@
          @foreach ($banners as $banner)
             <div class="slider-wrapper">
                 <div class="overlay"></div>
-                <img src="{{ $banner->image_url  }}" />
+                <img src="/storage/{{ $banner->image_url  }}" />
                 <div class="slider-caption">
                 <h1>{{ $banner->header  }}</h1>
                 <p>
@@ -173,7 +173,7 @@
       <section id="about" class="about-section">
         <div class="row m-0 h-100">
           <div class="col-6">
-            <img src="{{ asset($aboutus->image_url) }}" />
+            <img src="/storage/{{ asset($aboutus->image_url) }}" />
           </div>
           <div class="col-6 d-flex flex-column justify-content-center">
             <h5>Who We Are</h5>
@@ -228,7 +228,7 @@
             @forelse ($services as  $service)
             <div class="services-card">
                 <div class="image-wrapper">
-                  <img src="{{ asset($service->image_url) }}" />
+                  <img src="/storage/{{ asset($service->image_url) }}" />
                   <div class="overlay"></div>
                 </div>
                 <div>

@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-12 col-md-5 text-center">
                     <div class="profile-photo-wrapper">
-                        <img id="viewPhoto" src="/{{ auth()->user()->image_url }}" />
+                        <img id="viewPhoto" src="/storage/{{ auth()->user()->image_url }}" />
                     </div>
                     </div>
                     <div class="col-12 col-md-7 d-flex align-items-center">

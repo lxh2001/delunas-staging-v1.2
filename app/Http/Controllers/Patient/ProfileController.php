@@ -31,7 +31,7 @@ class ProfileController extends Controller
                 // $validatedRequest['image_url'] = $filePath;
                 $imageName = time() . '_' . $request->image->getClientOriginalName();
                 $request->image->storeAs('public', $imageName);
-                $data['image_url'] = $imageName;
+                $validatedRequest['image_url'] = $imageName;
             }
 
             $user = auth()->user();

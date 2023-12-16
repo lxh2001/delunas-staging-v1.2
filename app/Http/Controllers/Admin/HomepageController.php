@@ -15,6 +15,7 @@ use App\Models\MissionVisionSetting;
 use App\Models\Notification;
 use App\Models\ServicesSetting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Spatie\Backtrace\File;
 
 class HomepageController extends Controller
@@ -39,8 +40,11 @@ class HomepageController extends Controller
         $validatedRequest = $request->validated();
         if($request->has('image')) {
             $fileName = time() . '.' . $request->image->extension();
-            $filePath = $request->image->move('images/uploads/', $fileName);
+            // $filePath = $request->image->move('images/uploads/', $fileName);
 
+            // $fileName = time().'.'.$request->image->extension();
+            $directory = 'images/uploads/';
+            $filePath = Storage::putFileAs($directory, $request->file('image'), $fileName);
             $validatedRequest['image_url'] = $filePath;
         }
 

@@ -167,7 +167,8 @@ class HomepageController extends Controller
             // $service->image_url = $filePath;
             $imageName = time() . '_' . $request->image->getClientOriginalName();
             $request->image->storeAs('public', $imageName);
-            $validatedRequest['image_url'] = $imageName;
+            // $validatedRequest['image_url'] = $imageName;
+            $service->image_url = $imageName;
         }
 
         $service->title = $validatedRequest['title'];
